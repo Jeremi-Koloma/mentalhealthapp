@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mentalhealthapp/utils/emotion.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(height: 8.0),
                         Text(
-                          '14 April, 2023',
+                          '14 April, 2024',
                           style: TextStyle(color: Colors.blue[200]),
                         ),
                       ],
@@ -80,6 +81,84 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+                ),
+                // HOW DO YOU FEEL ?
+                const SizedBox(height: 25.0),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'How do you feel ?',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 25.0),
+                // 04 DIFFERENCE FACES
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // bad
+                    Column(
+                      children: [
+                        Emotion(
+                          emotIconFace: '😞',
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          "Badly",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    // fine
+                    Column(
+                      children: [
+                        Emotion(
+                          emotIconFace: '😊',
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          "Fine",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    //well
+                    Column(
+                      children: [
+                        Emotion(
+                          emotIconFace: '😁',
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          "Well",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    // excellent
+                    Column(
+                      children: [
+                        Emotion(
+                          emotIconFace: '😀',
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          "Excellent",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
