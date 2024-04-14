@@ -58,6 +58,29 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 // SEARCH BAR
+                const SizedBox(height: 25.0),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.blue[600],
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.search,
+                          color: Colors.white,
+                        ),
+                        SizedBox(width: 5.0),
+                        Text(
+                          "Search",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
