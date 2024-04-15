@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(12.0),
+                      padding: EdgeInsets.all(16.0),
                       child: Row(
                         children: [
                           Icon(
