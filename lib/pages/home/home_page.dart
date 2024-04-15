@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mentalhealthapp/utils/emotion.dart';
+import 'package:mentalhealthapp/utils/exerices_tile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -169,8 +172,57 @@ class _HomePageState extends State<HomePage> {
             // MAIN CONTAINER INFOS
             Expanded(
               child: Container(
+                padding: const EdgeInsets.all(25.0),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.grey[200],
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    // EXERCICE HEADLING
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Exercice",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Icon(Icons.more_horiz),
+                      ],
+                    ),
+                    const SizedBox(height: 20.0),
+                    // LISTVIEW OF EXERCICE
+                    Expanded(
+                      child: ListView(
+                        children: const [
+                          ExericesTile(
+                            icon: Icons.favorite,
+                            exerciceName: 'Speaking Skills',
+                            numberExercie: 16,
+                            color: Colors.orange,
+                          ),
+                          ExericesTile(
+                            icon: Icons.person,
+                            exerciceName: 'Reading Skills',
+                            numberExercie: 8,
+                            color: Colors.green,
+                          ),
+                          ExericesTile(
+                            icon: Icons.star,
+                            exerciceName: 'Writing Skills',
+                            numberExercie: 16,
+                            color: Colors.pink,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

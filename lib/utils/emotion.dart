@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Emotion extends StatelessWidget {
   // Variable for our emoji icon
   final String emotIconFace;
+  
   const Emotion({super.key, required this.emotIconFace});
 
   @override
