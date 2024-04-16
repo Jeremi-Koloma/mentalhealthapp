@@ -15,6 +15,7 @@ class DashbordPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  // TEXT
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -36,6 +37,7 @@ class DashbordPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  // NOTIFICATION
                   Container(
                     padding: const EdgeInsets.all(12.0),
                     decoration: BoxDecoration(
@@ -48,6 +50,30 @@ class DashbordPage extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              const SizedBox(height: 25.0),
+              // SEARCH BAR
+              Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  color: Colors.blue[600],
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(
+                      Icons.search_rounded,
+                      color: Colors.white,
+                    ),
+                    SizedBox(width: 5.0),
+                    Text(
+                      'Search',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
