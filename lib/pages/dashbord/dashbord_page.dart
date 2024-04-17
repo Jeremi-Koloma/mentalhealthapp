@@ -127,21 +127,35 @@ class DashbordPage extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 10.0),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const CategoryDashb(
+                          CategoryDashb(
                             color: Colors.orange,
                             categoryTitle: 'Education',
                           ),
-                          const SizedBox(width: 10),
+                          SizedBox(width: 10),
                           CategoryDashb(
-                            color: Colors.red[600],
+                            color: Colors.pink,
                             categoryTitle: 'Other',
                           ),
                         ],
                       ),
-                      
+                      // CONSULTANT TEXT
+                      const SizedBox(height: 20.0),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Consultant',
+                            style: TextStyle(
+                              fontSize: 19.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Icon(Icons.more_horiz),
+                        ],
+                      ),
                     ],
                   ),
                 ),
