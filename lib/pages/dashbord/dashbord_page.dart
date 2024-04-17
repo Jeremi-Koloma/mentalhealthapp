@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:mentalhealthapp/utils/category_dashb.dart';
 
 class DashbordPage extends StatelessWidget {
   const DashbordPage({super.key});
@@ -14,6 +16,7 @@ class DashbordPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 children: [
+                  // GREATING
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -32,7 +35,7 @@ class DashbordPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 8.0),
                           Text(
-                            '20 Jan, 2024',
+                            '16 April, 2024',
                             style: TextStyle(
                               color: Colors.blue[200],
                             ),
@@ -83,8 +86,64 @@ class DashbordPage extends StatelessWidget {
             const SizedBox(height: 25.0),
             Expanded(
               child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 10.0),
+                      // CATEGORY TEXT
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Category',
+                            style: TextStyle(
+                                fontSize: 19.0, fontWeight: FontWeight.bold),
+                          ),
+                          Icon(Icons.more_horiz),
+                        ],
+                      ),
+                      // CATEGORY CARD
+                      const SizedBox(height: 20.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const CategoryDashb(
+                            color: Colors.deepPurple,
+                            categoryTitle: 'Relationship',
+                          ),
+                          const SizedBox(width: 10),
+                          CategoryDashb(
+                            color: Colors.blue[600],
+                            categoryTitle: 'Career',
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const CategoryDashb(
+                            color: Colors.orange,
+                            categoryTitle: 'Education',
+                          ),
+                          const SizedBox(width: 10),
+                          CategoryDashb(
+                            color: Colors.red[600],
+                            categoryTitle: 'Other',
+                          ),
+                        ],
+                      ),
+                      
+                    ],
+                  ),
                 ),
               ),
             ),
