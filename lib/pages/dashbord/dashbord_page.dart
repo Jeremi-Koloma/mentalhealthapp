@@ -3,6 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mentalhealthapp/utils/category_dashb.dart';
+import 'package:mentalhealthapp/utils/constultant_card.dart';
 
 class DashbordPage extends StatelessWidget {
   const DashbordPage({super.key});
@@ -128,7 +129,7 @@ class DashbordPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10.0),
+                      const SizedBox(height: 15.0),
                       const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -160,57 +161,25 @@ class DashbordPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 20.0),
                       // LISTVIEW OF CONSULTATIONS
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 12.0),
-                        child: Container(
-                          padding: const EdgeInsets.all(16.0),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(12.0),
-                                    decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    child: const Icon(
-                                      Icons.person,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 12.0),
-                                  const Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Boby Singer',
-                                        style: TextStyle(
-                                          fontSize: 16.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      SizedBox(height: 8.0),
-                                      Text(
-                                        'Education',
-                                        style: TextStyle(
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              const Icon(Icons.more_horiz),
-                            ],
-                          ),
+                      Expanded(
+                        child: ListView(
+                          children: const [
+                            ConstultantCard(
+                              consultantUsername: 'Bobby Singer',
+                              consultantCategory: 'Education',
+                              color: Colors.green,
+                            ),
+                            ConstultantCard(
+                              consultantUsername: 'Dean Weschester',
+                              consultantCategory: 'Career',
+                              color: Colors.deepPurple,
+                            ),
+                            ConstultantCard(
+                              consultantUsername: 'Jeremi Koloma',
+                              consultantCategory: 'Relationship',
+                              color: Colors.pink,
+                            ),
+                          ],
                         ),
                       ),
                     ],
