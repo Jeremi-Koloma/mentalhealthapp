@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:mentalhealthapp/utils/category_dashb.dart';
 import 'package:mentalhealthapp/utils/constultant_card.dart';
 
@@ -10,10 +7,10 @@ class DashbordPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.blue[800],
-        body: Column(
+    return Scaffold(
+      backgroundColor: Colors.blue[800],
+      body: SafeArea(
+        child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),

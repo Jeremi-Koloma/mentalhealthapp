@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mentalhealthapp/pages/dashbord/dashbord_page.dart';
-import 'package:mentalhealthapp/pages/home/home_page.dart';
+import 'package:mentalhealthapp/navigation_menu/navigation_menu_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DashbordPage(),
+      home: const NavigationMenuPage(),
     );
   }
 }
