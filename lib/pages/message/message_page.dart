@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});
@@ -63,7 +64,7 @@ class MessagePage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 15.0),
             // MESSAGE CONTAINER
             Expanded(
               child: Container(
@@ -74,9 +75,75 @@ class MessagePage extends StatelessWidget {
                     topRight: Radius.circular(30.0),
                   ),
                 ),
-                child: const Center(
-                  child: Column(
-                    children: [Text("dd")],
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Column(
+                      children: [
+                        // MESSAGE LEFT
+                        Expanded(
+                          child: Container(),
+                        ),
+
+                        // BOTTOM INPUT SECTION
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10.0),
+                          child: Row(
+                            children: [
+                              // INPUT MESSAGE
+                              Expanded(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15, top: 5, right: 15, bottom: 5),
+                                    child: Row(
+                                      children: [
+                                        Expanded(
+                                          child: TextField(
+                                            keyboardType:
+                                                TextInputType.multiline,
+                                            maxLines: null,
+                                            decoration: InputDecoration(
+                                              hintText: 'write a message...',
+                                              border: InputBorder.none,
+                                              hintStyle: TextStyle(
+                                                color: Colors.grey[800],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        // GALERIE ICON
+                                        IconButton(
+                                          onPressed: () {},
+                                          icon:
+                                              const Icon(Icons.image_outlined),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 15.0),
+                              Container(
+                                padding: const EdgeInsets.all(16.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.blue[800],
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: const Icon(
+                                  Icons.send,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
