@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mentalhealthapp/utils/message_receiver.dart';
+import 'package:mentalhealthapp/utils/message_sender.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});
@@ -76,74 +78,124 @@ class MessagePage extends StatelessWidget {
                   ),
                 ),
                 child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Column(
-                      children: [
-                        // MESSAGE LEFT
-                        Expanded(
-                          child: Container(),
-                        ),
-
-                        // BOTTOM INPUT SECTION
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 10.0),
-                          child: Row(
+                  child: Column(
+                    children: [
+                      // LISTVIEW OF MESSAGES
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              left: 20, top: 20.0, right: 20.0, bottom: 10.0),
+                          child: ListView(
                             children: [
-                              // INPUT MESSAGE
-                              Expanded(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15, top: 5, right: 15, bottom: 5),
-                                    child: Row(
-                                      children: [
-                                        Expanded(
-                                          child: TextField(
-                                            keyboardType:
-                                                TextInputType.multiline,
-                                            maxLines: null,
-                                            decoration: InputDecoration(
-                                              hintText: 'write a message...',
-                                              border: InputBorder.none,
-                                              hintStyle: TextStyle(
-                                                color: Colors.grey[800],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        // GALERIE ICON
-                                        IconButton(
-                                          onPressed: () {},
-                                          icon:
-                                              const Icon(Icons.image_outlined),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                              MessageReceiver(
+                                message: 'Hi Jeremi, how are you ❓',
+                                colorMessageBox: Colors.grey[300],
+                                textMessageColor: Colors.black,
                               ),
-                              const SizedBox(width: 15.0),
-                              Container(
-                                padding: const EdgeInsets.all(16.0),
-                                decoration: BoxDecoration(
-                                  color: Colors.blue[800],
-                                  borderRadius: BorderRadius.circular(12.0),
-                                ),
-                                child: const Icon(
-                                  Icons.send,
-                                  color: Colors.white,
-                                ),
+                              MessageSender(
+                                message: "I'm good thanks, How about you ?",
+                                colorMessageBox: Colors.blue[600],
+                                textMessageColor: Colors.white,
+                              ),
+                              MessageSender(
+                                message: "Long time no see 😊",
+                                colorMessageBox: Colors.blue[600],
+                                textMessageColor: Colors.white,
+                              ),
+                              MessageReceiver(
+                                message:
+                                    "Really ! i have a couple of things to do that's why i'm lost ",
+                                colorMessageBox: Colors.grey[300],
+                                textMessageColor: Colors.black,
+                              ),
+                              MessageSender(
+                                message: "Aah okay i see now 😇",
+                                colorMessageBox: Colors.blue[600],
+                                textMessageColor: Colors.white,
+                              ),
+                              MessageReceiver(
+                                message: 'The new ? where are you ?',
+                                colorMessageBox: Colors.grey[300],
+                                textMessageColor: Colors.black,
+                              ),
+                              MessageSender(
+                                message: "New York",
+                                colorMessageBox: Colors.blue[600],
+                                textMessageColor: Colors.white,
+                              ),
+                              MessageReceiver(
+                                message: "In fact, it was beeing a long time",
+                                colorMessageBox: Colors.grey[300],
+                                textMessageColor: Colors.black,
+                              ),
+                              MessageSender(
+                                message:
+                                    "Since University i didn't see you anymore",
+                                colorMessageBox: Colors.blue[600],
+                                textMessageColor: Colors.white,
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+
+                      // BOTTOM INPUT SECTION
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 20.0, right: 20.0, bottom: 10.0),
+                        child: Row(
+                          children: [
+                            // INPUT MESSAGE
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 15, top: 5, right: 15, bottom: 5),
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: TextField(
+                                          keyboardType: TextInputType.multiline,
+                                          maxLines: null,
+                                          decoration: InputDecoration(
+                                            hintText: 'write a message...',
+                                            border: InputBorder.none,
+                                            hintStyle: TextStyle(
+                                              color: Colors.grey[800],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      // GALERIE ICON
+                                      IconButton(
+                                        onPressed: () {},
+                                        icon: const Icon(Icons.image_outlined),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 15.0),
+                            Container(
+                              padding: const EdgeInsets.all(16.0),
+                              decoration: BoxDecoration(
+                                color: Colors.blue[800],
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              child: const Icon(
+                                Icons.send,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
