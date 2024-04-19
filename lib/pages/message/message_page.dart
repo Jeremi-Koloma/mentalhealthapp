@@ -130,7 +130,7 @@ class MessagePage extends StatelessWidget {
                               ),
                               MessageSender(
                                 message:
-                                    "Since University i didn't see you anymore",
+                                    "Since University i didn't see you anymore 😅😅😅",
                                 colorMessageBox: Colors.blue[600],
                                 textMessageColor: Colors.white,
                               ),
